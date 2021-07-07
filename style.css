@@ -6,6 +6,10 @@ body{
     margin: 0;
     background-color: #1A1B1F;
     font-family: 'Roboto Condensed', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
 }
 .header{
     height: 25vh;
@@ -30,6 +34,8 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-right: 5rem;
+    margin-left: 5rem;
     cursor: pointer;
     color: rgb(150, 147, 147);
     background: linear-gradient(145deg, #1c1d21, #17181c);
@@ -64,6 +70,73 @@ a{
     height: 20%;
     font-size: 1.4rem;
 }
+
+.popup_window{
+    visibility: hidden;
+    position: absolute;
+    border-radius: 1.5rem;
+    height: 15rem;
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(150, 147, 147);
+    background: linear-gradient(145deg, #1c1d21, #17181c);
+    box-shadow: 6px 6px 8px #101114, -6px -6px 8px #24252a;
+}
+.popup_window.show{
+    visibility: visible;
+}
+.name_box{
+    height: 50%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.enterBtnBox{
+    height: 20%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.label{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+.textBox{
+    height: 40px;
+    width: 50%;
+    /* color: rgb(150, 147, 147); */
+    outline: none;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-left: 10px;
+    border-bottom: 1px solid rgb(150, 147, 147);
+}
+.enter{
+    height: 40px;
+    width: 160px;
+    margin-bottom: 30px;
+    border-radius: 1.5rem;
+    color: rgb(150, 147, 147);
+    background: linear-gradient(145deg, #1c1d21, #17181c);
+    box-shadow: 6px 6px 8px #101114, -6px -6px 8px #24252a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    outline: none;
+    color: rgb(150, 147, 147);
+}
+.enter:hover{
+    transform: scale(1.05);
+    color: rgb(80, 220, 255);
+}
+
 #popUpMsg {
     visibility: hidden;
     min-width: 200px;

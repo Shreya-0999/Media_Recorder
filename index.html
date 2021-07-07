@@ -15,7 +15,6 @@
 <body>
     <div class="header">Media Recorder</div>
     <div class="main_area">
-        <div id="popUpMsg">Saved to Gallery</div>
         <div class="card camera" id="camera">
             <div class="card_image">
                 <i class="fas fa-camera"></i>
@@ -33,6 +32,17 @@
                 <i class="fas fa-image"></i>
             </div>
             <div class="card_details">Gallery</div>
+        </div>
+
+        <div id="popUpMsg">Saved to Gallery</div>
+    </div>
+    <div class="popup_window" id = "popup_window">
+        <div class="name_box">
+            <h3 class="label">Save As :</h3>
+            <div class="textBox" id="textBox" contenteditable="true">Untitled</div>
+        </div>
+        <div class="enterBtnBox">
+            <button class="btn enter">Enter</button>
         </div>
     </div>
     <script src="dbScript.js" defer></script>
