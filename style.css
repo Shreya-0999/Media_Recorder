@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: #1A1B1F;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.header{
+    height: 25vh;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    font-weight: 700;
+    letter-spacing: 2px;
+    animation: blink 3s infinite ease;
+}
+.main_area{
+    height: 75vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.card{
+    height: 200px;
+    width: 250px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    color: rgb(150, 147, 147);
+    background: linear-gradient(145deg, #1c1d21, #17181c);
+    box-shadow: 6px 6px 8px #101114, -6px -6px 8px #24252a;
+}
+a{
+    text-decoration: none ; 
+}
+.card:hover{
+    transform: scale(1.05);
+    background: linear-gradient(120deg, #7cf1fa 0%, #69a6fc 100%);
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    text-shadow: #02fafa36 0px 0px 100px;
+}
+.activeCard{
+    background: #1A1B1F;
+    box-shadow: inset 6px 6px 8px #101114, inset -6px -6px 8px #24252a;
+    color: #29ffff;
+    text-decoration: none;
+}
+.card>*{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card_image{
+    height: 60%;
+    font-size: 70px;
+}
+.card_details{
+    height: 20%;
+    font-size: 1.4rem;
+}
+#popUpMsg {
+    visibility: hidden;
+    min-width: 200px;
+    margin-left: -125px;
+    background-color: #1A1B1F;
+    color: rgb(201, 201, 201);
+    text-align: center;
+    padding: 0.7rem;
+    position: fixed;
+    z-index: 100;
+    left: 50%;
+    bottom: 80px;
+    font-size: 20px;
+    border-radius: 2rem;
+}
+  
+#popUpMsg.show {
+    visibility: visible;
+    animation: fadein 2s ease, fadeout 2s 3.5s;
+}
+
+@keyframes blink {
+    0%{
+        color: rgb(150, 147, 147);
+    }
+    25%{
+        background: linear-gradient(120deg, #8df1f8 0%, #77affd 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    50%{
+        background: linear-gradient(120deg, #7cf1fa 0%, #69a6fc 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: #02fafa2f 1px 1px 10px;
+    }
+    75%{
+        background: linear-gradient(120deg, #8df1f8 0%, #77affd 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    100%{
+        color: rgb(150, 147, 147);
+    }
+}
+
+@keyframes fadein {
+from {bottom: 0; opacity: 0;}
+to {bottom: 80px; opacity: 1;}
+}
+
+@keyframes fadeout {
+from {bottom: 80px; opacity: 1;}
+to {bottom: 0; opacity: 0;}
+}

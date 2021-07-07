@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="c_style.css">
+</head>
+
+<body>
+    <div class="filter_box"></div>
+    <div class="row">
+        <div class="col side_column">
+            <div class="back" id="back">
+                <i class="fas fa-arrow-left"></i>
+                <div class="back_details">Back</div>
+            </div>
+            <!-- <div class="filters" id="filters"></div> -->
+            <div class="filter_editor">
+                <div class="singleSlider">
+                    <div class="slider_detail">
+                        <div class="filter_name">Brightness</div>
+                        <div class="filter_value" id="bright_value">100%</div>
+                    </div>
+                    <input class="slider" id="bright" type="range" min="0" max="200" value="100">
+                </div>
+                <div class="singleSlider">
+                    <div class="slider_detail">
+                        <div class="filter_name">Contrast</div>
+                        <div class="filter_value" id="contrast_value">100%</div>
+                    </div>
+                    <input class="slider" id="contrast" type="range" min="0" max="200" value="100">
+                </div>
+                <div class="singleSlider">
+                    <div class="slider_detail">
+                        <div class="filter_name">Saturation</div>
+                        <div class="filter_value" id="saturate_value">100%</div>
+                    </div>
+                    <input class="slider" id="saturate" type="range" min="0" max="200" value="100">
+                </div>
+                <div class="singleSlider">
+                    <div class="slider_detail">
+                        <div class="filter_name">Grayscale</div>
+                        <div class="filter_value" id="gray_value">0%</div>
+                    </div>
+                    <input class="slider" id="gray" type="range" min="0" max="100" value="0">
+                </div>
+                <div class="singleSlider">
+                    <div class="slider_detail">
+                        <div class="filter_name">Invert</div>
+                        <div class="filter_value" id="invert_value">0%</div>
+                    </div>
+                    <input class="slider" id="invert" type="range" min="0" max="100" value="0">
+                </div>
+                <div class="singleSlider">
+                    <div class="slider_detail">
+                        <div class="filter_name">Hue</div>
+                        <div class="filter_value" id="hue_value">0°</div>
+                    </div>
+                    <input class="slider" id="hue" type="range" min="0" max="360" value="0">
+                </div>
+                <div class="singleSlider">
+                    <div class="slider_detail">
+                        <div class="filter_name">Sepia</div>
+                        <div class="filter_value" id="sepia_value">0%</div>
+                    </div>
+                    <input class="slider" id="sepia" type="range" min="0" max="100" value="0">
+                </div>
+            </div>
+            <div class="filters"></div>
+        </div>
+        <div class=" col-7 video_container">
+            <video class="video" id="video_elem" autoplay></video>
+            <div id="popUpMsg">Saved to Gallery</div>
+            <div class="popup_window" id = "popup_window">
+                <div class="name_box">
+                    <h3 class="label">Save As :</h3>
+                    <div class="textBox" id="textBox" contenteditable="true">Untitled</div>
+                </div>
+                <div class="enterBtnBox">
+                    <button class="btn enter">Enter</button>
+                </div>
+            </div>
+        </div>
+        <div class="col side_column">
+            <div class="btn zoomBox">
+                <div class="zoom image" id="zoomIn">
+                    <img src="zoom-in.png" alt="">
+                </div>
+                <div class="zoom image" id="zoomOut">
+                    <img src="zoom-out.png" alt="">
+                </div>
+            </div>
+            <div class="timer_box" id="timer">
+                <div class="red_circle"></div>
+                <div class="timer" id="recTime">00:00:00</div>
+            </div>
+            <div class="btn capture" id="camera">
+                <div class="image">
+                    <img src="camera.png" alt="">
+                </div>
+                <h5>Capture</h5>
+            </div>
+            <div class="btn recorder" id="recorder">
+                <div class="image">
+                    <img src="video.png" alt="">
+                </div>
+                <h5>Video</h5>
+            </div>
+            <div class="btn gallery" id="gallery">
+                <div class="image">
+                    <img src="gallery.png" alt="">
+                </div>
+                <h5>Gallery</h5>
+            </div>
+        </div>
+    </div>
+    <script src="../dbScript.js" defer></script>
+    <script src="filters.js" defer></script>
+    <script src="c_script.js" defer></script>
+</body>
+
+</html>
