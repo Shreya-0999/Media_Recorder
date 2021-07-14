@@ -13,12 +13,12 @@ gfilter.addEventListener("change", function(e){
     if(imageContainer){
         if(filter_value === "All"){
             imageContainer.forEach((container)=>{
-                container.style.display = "block";
+                container.style.display = "flex";
             })
         }else{
             imageContainer.forEach((container)=>{
                 if(filter_value === container.classList[1]){
-                    container.style.display = "block";
+                    container.style.display = "flex";
                 }else{
                     container.style.display = "none";
                 }
