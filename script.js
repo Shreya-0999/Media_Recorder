@@ -42,11 +42,6 @@ screenRecCard.addEventListener("click", async function (e) {
             mediaRecorder.addEventListener("stop", function () {
                 popwindow.classList.add("show");
                 mainArea.style.opacity = 0.5;
-                // mainArea.style.opacity = 0.5;
-                // let blob = new Blob(buffer, { type: 'screenRec/mp4' });
-                // let date = findDate();
-                // addMedia(blob, "video", "screenRec", date);
-                // buffer = [];
                 popUpWindow();
                 popUpMsg();
             })
@@ -72,7 +67,7 @@ function findDate() {
 
 function popUpMsg() {
     popMsg.className = "show";
-    setTimeout(function () { popMsg.className = popMsg.className.replace("show", ""); }, 1000);
+    setTimeout(function () { popMsg.className = popMsg.className.replace("show", ""); }, 2000);
 }
 
 function popUpWindow() {
@@ -80,7 +75,7 @@ function popUpWindow() {
         let mediaName = textBox.innerText;
         let date = findDate();
         let blob = new Blob(buffer, { type: 'screenRec/mp4' });
-        addMedia(blob, "video", mediaName, date);
+        addMedia(blob, "scrvideo", mediaName, date);
         buffer = [];
         mainArea.style.opacity = 1;
         popwindow.classList.remove("show");

@@ -20,6 +20,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: blink 3s infinite ease;
 }
 .back{
     position: absolute;
@@ -53,6 +54,30 @@ body{
 .back:hover > .back_details{
     width: 60px;
     display: flex;
+}
+
+.filter_box{
+    height: 10vh;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gfilter{
+    margin-right: 10px;
+}
+.options{
+    height: 50%;
+    padding: 5px;
+    font-size: 1.3rem;
+    color: rgb(150, 147, 147);
+    outline: none;
+    border:none;
+    border-radius: 2rem;
+    background: linear-gradient(145deg, #1c1d21, #17181c);
+    box-shadow: 6px 6px 8px #101114, -6px -6px 8px #24252a;
 }
 /* ******************************************** */
 .image_container{
@@ -141,4 +166,29 @@ video{
     height: 95%;
     width: 95%;
     border-radius: 1.5rem;
+}
+
+@keyframes blink {
+    0%{
+        color: rgb(150, 147, 147);
+    }
+    25%{
+        background: linear-gradient(120deg, #8df1f8 0%, #77affd 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    50%{
+        background: linear-gradient(120deg, #7cf1fa 0%, #69a6fc 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: #02fafa2f 1px 1px 10px;
+    }
+    75%{
+        background: linear-gradient(120deg, #8df1f8 0%, #77affd 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    100%{
+        color: rgb(150, 147, 147);
+    }
 }

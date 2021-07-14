@@ -31,6 +31,7 @@ function viewMedia() {
             imageContainer.setAttribute("data_mId", cursor.value.mId);
 
             if (cursor.value.type == "img") {
+                imageContainer.classList.add("image");
                 imageContainer.innerHTML = `
                 <div class = "date">
                     ${cursor.value.date}
@@ -51,6 +52,9 @@ function viewMedia() {
                 </div>`;
             }
             else {
+                cursor.value.type == "scrvideo" ? 
+                imageContainer.classList.add("scrvideo") : 
+                imageContainer.classList.add("video");
                 imageContainer.innerHTML = `
                 <div class = "date">
                     ${cursor.value.date}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="g_style.css">
 </head>
+
 <body>
     <div class="header_box">
         <div class="back" id="back">
@@ -18,14 +20,24 @@
         </div>
         <div class="header">Gallery</div>
     </div>
+    <div class="filter_box">
+        <label for="gfilter" class="gfilter">Filter :</label>
+        <select id="gfilter" name="gfilter" class="options">
+            <option value="All">All</option>
+            <option value="image">Image</option>
+            <option value="video">Video</option>
+            <option value="scrvideo">Screen Recording</option>
+        </select>
+    </div>
     <div class="media_area" id="media_area">
     </div>
     <script>
         setTimeout(function () {
-        viewMedia();
-      }, 100);
+            viewMedia();
+        }, 100);
     </script>
-    <script src="../dbScript.js"defer></script>
+    <script src="../dbScript.js" defer></script>
     <script src="g_script.js"></script>
 </body>
+
 </html>
