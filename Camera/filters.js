@@ -71,6 +71,7 @@ invertSlider.addEventListener("input", function () {
 })
 hueSlider.addEventListener("input", function () {
     hueValue.innerHTML = hueSlider.value + "°";
+
     huerotate = hueSlider.value;
     updateFilters();
 })
