@@ -70,7 +70,7 @@ invertSlider.addEventListener("input", function () {
     updateFilters();
 })
 hueSlider.addEventListener("input", function () {
-    hueValue.innerHTML = hueSlider.value + "%";
+    hueValue.innerHTML = hueSlider.value + "○";
     huerotate = hueSlider.value;
     updateFilters();
 })
