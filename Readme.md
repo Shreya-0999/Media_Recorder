@@ -22,4 +22,4 @@ The project is about a web-based camera application. The features of this applic
 ## Technologies Used: 
 HTML, CSS, JavaScript, IndexDB, MediaSreams, Canvas APIs.
 
-### Page: https://shreya-0999.github.io/Camera-Application/
+### Page: hhttps://shreya-0999.github.io/Media_Recorder/
